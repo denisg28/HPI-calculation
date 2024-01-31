@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HPI Validator</title>
+  <title>Date Difference Calculator</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -16,7 +16,7 @@
     }
 
     .container {
-      background-color: #fff;
+      background-color: #ffffff;
       padding: 70px;
       border-radius: 28px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -54,13 +54,13 @@
 </head>
 <body>
   <div class="container">
-    <h2>HPI Validator</h2>
+    <h2>Date Difference Calculator</h2>
     <form id="dateForm">
-      <label for="date1">Enter Date 1 (fertilization_time):</label>
-      <input type="text" id="date1" placeholder="YYYY-MM-DDTHH:mm:ss.SSSZ" required>
+      <label for="date1">Enter Date 1:</label>
+      <input type="text" id="date1" placeholder="YYYY-MM-DDTHH:mm:ss e.g., fertilization_time" required>
 
-      <label for="date2">Enter Date 2 (valid_thumbnail_frame_time):</label>
-      <input type="text" id="date2" placeholder="YYYY-MM-DDTHH:mm:ss.SSSZ" required>
+      <label for="date2">Enter Date 2:</label>
+      <input type="text" id="date2" placeholder="YYYY-MM-DDTHH:mm:ss e.g., valid_thumbnail_frame_time" required>
 
       <button type="button" onclick="calculateDifference()">Submit</button>
     </form>
@@ -80,7 +80,7 @@
 
       // Check if input is valid
       if (isNaN(date1.getTime()) || isNaN(date2.getTime())) {
-        alert('Invalid date format. Please use the format: YYYY-MM-DDTHH:mm:ss.SSSZ');
+        alert('Invalid date format. Please use the format: YYYY-MM-DDTHH:mm:ss');
         return;
       }
 
